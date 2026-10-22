@@ -1890,12 +1890,11 @@ main {
     height: 938px;
     top: 0;
     left: 50%;
-    transform: translate(-90%, -20%);
+    transform: translate(-70%, -20%);
   }
   .about .bg-circle__inner {
-    /* 💡 CSSで動かす魔法のプロパティ */
     animation: scrollParallaxLeft linear;
-    animation-timeline: scroll(root); /* スクロール量とアニメーションを同期（モダンブラウザ対応） */
+    animation-timeline: scroll(root);
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1939,6 +1938,11 @@ main {
 .about #about-content-02 .com-ttl-02 {
   max-width: 352px;
 }
+@media screen and (min-width: 768px), print {
+  .about #about-content-02 .com-ttl-02 {
+    padding-top: 80px;
+  }
+}
 .about #about-content-02 .about-text {
   max-width: 672px;
   padding: 80px 0;
@@ -1964,6 +1968,7 @@ main {
 }
 @media screen and (min-width: 1024px) {
   .message-box {
+    margin-top: 32px;
     padding: 80px;
   }
 }
@@ -2001,6 +2006,11 @@ main {
   background-color: #fff;
   border-radius: 24px;
   margin-top: 1.6rem;
+  border: 1px solid #fff;
+  transition: all 0.5s;
+}
+.faq-item:hover {
+  border: 1px solid var(--color-bluegreen800);
 }
 .faq-item__question {
   display: flex;
